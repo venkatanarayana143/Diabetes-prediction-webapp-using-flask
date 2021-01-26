@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        fieldset{
+            background-color : #eeeeee;
+            width : 350px;
+        }
+
+        legend{
+            background-color : gray;
+            color : white;
+            padding: 5px 10px;
+        }
+        input{
+            margin : 15px;
+        }
+    </style>
+    <title>Title</title>
+
+</head>
+<body bgcolor="skyblue" >
+<h1><centre>  Diabetics Prediction </centre></h1>
+<br>
+<form method="post" action="{{url_for('predict')}}">
+    <fieldset>
+        <legend> Diabetes Prediction : </legend>
+        Pregnencies <input type="text" name="prg"/>
+    </br>
+        Glucose <input type="text" name="gl" />
+    </br>
+        Blood Pressure <input type="text" name="bp" />
+    </br>
+        Skin Thickness <input type="text" name="sk" />
+    </br>
+        Insulin <input type="text" name="ins" />
+    </br>
+        BMI <input type="text" name="BMI" />
+    </br>
+        Pedigree Function <input type="text" name="ped" />
+    </br>
+        Age <input type="text" name="age" />
+    </br>
+        <button type="submit" class="btn">Predict</button>
+
+    </fieldset>
+</form>
+<br>
+<br>
+
+{{ prediction_text }}
+
+</body>
+</html>
